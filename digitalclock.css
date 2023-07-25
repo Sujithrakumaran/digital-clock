@@ -1,0 +1,35 @@
+h1{
+    position: relative;
+    left: 24px;
+    top:-35px;
+   font-size: 60px;
+
+    
+}
+div{
+    border: solid rgb(73, 73, 73);
+    border-radius: 25px;
+    border-width:20px ;
+    background-color: rgb(105, 231, 22);
+    height: 150px;
+    width: 300px;
+    margin-top: 200px;
+    margin-left: 500px;
+}
+
+p{   position: relative;
+    left: 27px;
+    top:-5px;
+    font-size: 30px;
+}
+
+button{
+    background-color: rgb(73, 73, 73);
+    border-radius: 25px;
+    height: 20px;
+    width: 100px;
+    position: relative;
+    left: 620px;
+    top:-210px;
+    border-style: hidden;
+}

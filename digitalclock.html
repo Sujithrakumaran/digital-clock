@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital clock</title>
+    <link rel="stylesheet" href="digitalclock.css">
+</head>
+<body>
+    <div>
+        <p></p>
+        <h1></h1>
+    </div>
+    <button onclick="stop()"></button>
+    <script>
+       let mytimer = setInterval(myclock,1000);
+
+
+
+
+        function myclock(){
+              let date = new Date();
+              let day;
+            switch (new Date().getDay()){
+              
+                case 0:
+              day = "Sunday";
+               break;
+              case 1:
+              day = "Monday";
+               break;
+               case 2:
+                day = "Tuesday";
+              break;
+             case 3:
+                day = "Wednesday";
+                break;
+              case 4:
+               day = "Thursday";
+                break;
+              case 5:
+                day = "Friday";
+              break;
+               case 6:
+                 day = "Saturday";
+
+              }
+              let mymonth =date.getUTCMonth()+1;
+              document.querySelector("p").innerHTML = ` ${date.getUTCDate()}/ ${mymonth}/ ${date.getUTCFullYear()} \u00A0\u00A0\u00A0\u00A0 ${day}`       ;
+              document.querySelector("h1").innerHTML = ` ${date.getUTCHours()}: ${date.getUTCMinutes()}: ${date.getUTCSeconds()}`;
+             
+        }          
+        function stop(){
+                clearInterval(mytimer);}
+                                         
+    </script>
+    
+</body>
+</html>
